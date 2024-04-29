@@ -8,7 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "db:generate": "drizzle-kit generate:mysql"
+    "db:generate": "drizzle-kit generate:sqlite"
   },
   "dependencies": {
     "drizzle-orm": "^0.30.9",
