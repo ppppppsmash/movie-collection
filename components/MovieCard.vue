@@ -17,11 +17,11 @@
 <template>
   <div class="h-128 w-64 border flex flex-col text-center">
     <NuxtLink 
-      class="mb-5 bg-gray-900 inline-block"
+      class="mb-5 bg-gray-900 inline-block w-full"
       :to="`/movies/${movie?.id}`"
     >
       <img
-        class="transform hover:translate-x-6 hover:-translate-y-6
+        class=" w-full transform hover:translate-x-6 hover:-translate-y-6
           delay-50 duration-100 inline-block"
         :src="imgURL"
         alt="映画ポスター"

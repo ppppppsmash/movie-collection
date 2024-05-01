@@ -25,7 +25,7 @@
   <div class="flex flex-col py-10">
     <div>
       <h2 class="text-2xl font-bold text-center">
-        PEI'S 映画APP
+        映画ステーション
       </h2>
       <div class="flex justify-center items-center h-32">
         <input
@@ -39,7 +39,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4
       xl:grid-cols-5 self-center gap-x-10 gap-y-10 mb-10">
         <div v-for="movie in data?.results">
-          <MovieCard :movie="movie"></MovieCard>
+          <MovieCard :movie="movie" />
         </div>
       </div>
 
