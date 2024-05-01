@@ -4,6 +4,14 @@
   const searchTerm = ref('')
 
   const page = ref(1)
+  const disabledPrevious = computed(() => {
+    return page.value === 1
+  })
+
+  const disabledNext = computed(() => {
+    return page.value + 1 === data.value?.total_pages
+  })
+
   const debouncedSearchTerm = refDebounced(searchTerm, 700)
   const url = computed(() => {
     return `api/movies/search?query=${debouncedSearchTerm.value}&page=${page.value}`
@@ -34,6 +42,7 @@
           <MovieCard :movie="movie"></MovieCard>
         </div>
       </div>
+
       <div
         class="flex justify-center"
         v-if="data?.results.length"
