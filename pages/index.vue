@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import type { APIResponse } from '@/types/APIResponse';
+  import type { APIResponse } from '@/types/APIResponse'
 
   const searchTerm = ref('')
 
