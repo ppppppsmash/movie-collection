@@ -1,4 +1,8 @@
 <script setup lang="ts">
+  definePageMeta({
+    middleware: ['auth']
+  })
+
   const email = ref('')
   const password = ref('')
   const isSignUp = ref(false)
@@ -23,6 +27,18 @@
     console.log('user', data)
     console.log('error', error)
   }
+
+  const user = useSupabaseUser()
+  console.log(user.value)
+  onMounted(() => {
+    watchEffect(() => {
+      if (!user.value) {
+        navigateTo('/login')
+      } else {
+        navigateTo('/')
+      }
+    })
+  })
 </script>
 
 <template>
