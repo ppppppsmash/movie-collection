@@ -13,6 +13,7 @@ export default defineNuxtConfig({
   },
   modules: [
     '@unocss/nuxt',
-    '@vueuse/nuxt'
+    '@vueuse/nuxt',
+    '@nuxtjs/supabase'
   ]
 })

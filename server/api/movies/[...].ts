@@ -11,5 +11,5 @@ export default async (event: any) => {
       }
     })
 
-    return result
+  return result
 }
