@@ -29,7 +29,7 @@
   }
 
   const user = useSupabaseUser()
-  console.log(user.value)
+
   onMounted(() => {
     watchEffect(() => {
       if (!user.value) {

@@ -24,6 +24,9 @@
 
   const { data } = await useFetch<APIResponse>(url)
 
+  const user = useSupabaseUser()
+  console.log(user.value?.id)
+
 </script>
 
 <template>

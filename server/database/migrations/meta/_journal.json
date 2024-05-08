@@ -1,12 +1,12 @@
 {
   "version": "5",
-  "dialect": "mysql",
+  "dialect": "pg",
   "entries": [
     {
       "idx": 0,
       "version": "5",
-      "when": 1714393654249,
-      "tag": "0000_modern_gamma_corps",
+      "when": 1715175366583,
+      "tag": "0000_keen_quentin_quire",
       "breakpoints": true
     }
   ]
