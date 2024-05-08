@@ -11,6 +11,7 @@
     "db:generate": "drizzle-kit generate:sqlite"
   },
   "dependencies": {
+    "@libsql/client": "^0.6.0",
     "@vueuse/core": "^10.9.0",
     "@vueuse/nuxt": "^10.9.0",
     "drizzle-orm": "^0.30.9",
