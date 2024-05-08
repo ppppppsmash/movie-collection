@@ -16,10 +16,13 @@ dependencies:
     version: 10.9.0(nuxt@3.11.2)(vue@3.4.26)
   drizzle-orm:
     specifier: ^0.30.9
-    version: 0.30.9(@libsql/client@0.6.0)
+    version: 0.30.9(@libsql/client@0.6.0)(postgres@3.4.4)
   nuxt:
     specifier: ^3.11.2
     version: 3.11.2(@libsql/client@0.6.0)(@unocss/reset@0.59.4)(drizzle-orm@0.30.9)(floating-vue@5.2.2)(unocss@0.59.4)(vite@5.2.10)
+  postgres:
+    specifier: ^3.4.4
+    version: 3.4.4
   vue:
     specifier: ^3.4.21
     version: 3.4.26
@@ -3680,7 +3683,7 @@ packages:
         optional: true
     dependencies:
       '@libsql/client': 0.6.0
-      drizzle-orm: 0.30.9(@libsql/client@0.6.0)
+      drizzle-orm: 0.30.9(@libsql/client@0.6.0)(postgres@3.4.4)
     dev: false
 
   /debug@2.6.9:
@@ -3859,7 +3862,7 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.30.9(@libsql/client@0.6.0):
+  /drizzle-orm@0.30.9(@libsql/client@0.6.0)(postgres@3.4.4):
     resolution: {integrity: sha512-VOiCFsexErmgqvNCOmbzmqDCZzZsHoz6SkWAjTFxsTr1AllKDbDJ2+GgedLXsXMDgpg/ljDG1zItIFeZtiO2LA==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
@@ -3940,6 +3943,7 @@ packages:
         optional: true
     dependencies:
       '@libsql/client': 0.6.0
+      postgres: 3.4.4
     dev: false
 
   /duplexer@0.1.2:
@@ -6380,6 +6384,11 @@ packages:
       nanoid: 3.3.7
       picocolors: 1.0.0
       source-map-js: 1.2.0
+
+  /postgres@3.4.4:
+    resolution: {integrity: sha512-IbyN+9KslkqcXa8AO9fxpk97PA4pzewvpi2B3Dwy9u4zpV32QicaEdgmF3eSQUzdRk7ttDHQejNgAEr4XoeH4A==}
+    engines: {node: '>=12'}
+    dev: false
 
   /pretty-bytes@6.1.1:
     resolution: {integrity: sha512-mQUvGU6aUFQ+rNvTIAcZuWGRT9a6f6Yrg9bHs4ImKF+HZCEK+plBvnAZYSIQztknZF2qnzNtr6F8s0+IuptdlQ==}

@@ -16,6 +16,7 @@
     "@vueuse/nuxt": "^10.9.0",
     "drizzle-orm": "^0.30.9",
     "nuxt": "^3.11.2",
+    "postgres": "^3.4.4",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
