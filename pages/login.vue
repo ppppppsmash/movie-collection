@@ -42,7 +42,7 @@
 </script>
 
 <template>
-  <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+  <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 bg-theme">
     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
       <h2 class="mt-10 text-center text-3xl font-bold leading-9 tracking-tight text-gray-900">KUROSAWA MOVIE</h2>
     </div>
@@ -55,7 +55,7 @@
         method="POST"
       >
         <div>
-          <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+          <label for="email" class="block text-sm font-medium leading-6 text-gray-900 text-white">Email address</label>
           <div class="mt-2">
             <input
               id="email"
@@ -71,7 +71,7 @@
 
         <div>
           <div class="flex items-center justify-between">
-            <label for="password"class="block text-sm font-medium leading-6 text-gray-900">Password</label>
+            <label for="password"class="block text-sm font-medium leading-6 text-gray-900 text-white">Password</label>
           </div>
           <div class="mt-2">
             <input
@@ -109,3 +109,39 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+.bg-theme::before {
+  position: absolute;
+  content: "";
+  left: 30%;
+  top: 20%;
+  width: 450px;
+  height: 450px;
+  background: #17141d;
+  border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+  will-change: border-radius, transform, opacity;
+  animation: sliderShape 5s linear infinite;
+  display: block;
+  z-index: -1;
+  -webkit-animation: sliderShape 5s linear infinite;
+}
+
+@keyframes sliderShape{
+  0%,100%{
+  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    transform: translate3d(0,0,0) rotateZ(0.01deg);
+  }
+  34%{
+      border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+    transform:  translate3d(0,5px,0) rotateZ(0.01deg);
+  }
+  50%{
+    transform: translate3d(0,0,0) rotateZ(0.01deg);
+  }
+  67%{
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60% ;
+    transform: translate3d(0,-3px,0) rotateZ(0.01deg);
+  }
+}
+</style>
